@@ -18,7 +18,6 @@ function printOutput(num){
 function getFormattedNumber(num){
 	if(num=="-"){
 		return "";
-	}
 
 			printHistory("");
 			printOutput("");
@@ -41,6 +40,23 @@ function getFormattedNumber(num){
 			if(output!="" || history!=""){
 				output= output==""?output:reverseNumberFormat(output);
 				history=history+output;
+					}
+	var n = Number(num);
+	var value = n.toLocaleString("en");
+	return value;
+}
+function reverseNumberFormat(num){
+	return Number(num.replace(/,/g,''));
+}
+var operator = document.getElementsByClassName(	}
+	var n = Number(num);
+	var value = n.toLocaleString("en");
+	return value;
+}
+function reverseNumberFormat(num){
+	return Number(num.replace(/,/g,''));
+}
+var operator = document.getElementsByClassName(
 				if(this.id=="="){
 					var result=eval(history);
 					printOutput(result);
